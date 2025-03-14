@@ -21,7 +21,7 @@ public class Triangle {
 
         // screen space vertices
         Vector2[] ss_vertices = new Vector2[3];
-        for (int i=0; i<2; i++) {
+        for (int i=0; i<3; i++) {
             ss_vertices[i] = c.global_to_screen_space(vertices[i]);
         }
 

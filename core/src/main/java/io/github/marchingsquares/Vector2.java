@@ -18,4 +18,16 @@ public class Vector2 {
     public static Vector2 sub(Vector2 v1, Vector2 v2) {
         return new Vector2(v1.x-v2.x, v1.y-v2.y);
     }
+
+    public static Vector2 mul(Vector2 v1, float lambda) {
+        return new Vector2(v1.x * lambda, v1.y * lambda);
+    }
+
+    public static Vector2 div(Vector2 v1, float lambda) {
+        return mul(v1, 1/lambda);
+    }
+
+    public String toString() {
+        return String.format("<%.2f, %.2f>", this.x, this.y);
+    }
 }

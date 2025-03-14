@@ -16,19 +16,14 @@ public class Main extends ApplicationAdapter {
     @Override
     public void create() {
         sr = new ShapeRenderer();
-
-        Vector2[] vertices = new Vector2[3];
-        Random r = new Random();
-        for (int i=0; i<3; i++) {
-            vertices[i] = new Vector2(r.nextInt(500), r.nextInt(500));
-        }
+        Vector2[] vertices = {Vector2.ZERO,new Vector2(100, 100), new Vector2(100, 0)};
         t = new Triangle(vertices);
     }
 
     @Override
     public void render() {
         ScreenUtils.clear(0.1f, 0.1f, 0.15f, 1f);
-
+        c.input();
         t.render(sr, c, Color.WHITE);
     }
 
